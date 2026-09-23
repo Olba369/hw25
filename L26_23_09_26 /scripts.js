@@ -1,12 +1,4 @@
 
-
-
-
-
-
-
-
-
 ///////////////26
 const btn =  document.querySelector("button"); //Show message
 const handleButtonClick = () => {console.log("Hello")};
