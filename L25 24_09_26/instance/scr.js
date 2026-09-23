@@ -5,7 +5,7 @@
 // 3 додавання айдішки...btn знайти куди його правильно вставити
 
 const list = document.querySelector("ul");//создаем переменную список куда будут сохраняться созданные элементы
-const createProduct = (id, name, price) => {};  //при кожному виклику функції буде в лішку додавати наш продукт
+const createProduct = (id, name, price) => {  //при кожному виклику функції буде в лішку додавати наш продукт
 const item = document.createElement("li");// <li></li>
 item.classList.add("product");//<li class = "product"></li>
 item.setAttribute ("id", id);// <li id = "123" class = "product"></li>
@@ -17,7 +17,7 @@ nameElement.textContent = name;
 const priceElement = document.createElement("div");// <div class = "product__price">price</div>
 priceElement.classList.add("product__price");
 priceElement.textContent = price;
-
+};
 // <li id class = "product" "123" >
 // <h6 class = 'product__name'>name</h6>
 // <div class = "product__price">price</div>
