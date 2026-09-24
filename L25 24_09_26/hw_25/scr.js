@@ -13,14 +13,14 @@ const createProductCard = (
 ) => {
   const item = `
 <li id = "${id}" >
-<h6 class = 'product_title'>${title} </h6>
-<h4 class = 'product_category'>${category} </h4>
+<h2 class = 'product_title'>${title} </h2>
+<h3 class = 'product_category'>${category} </h3>
 <div class = "product__price">${price}</div>
 <h4 class = 'product_discount'>${discount} </h4>
-<h4 class = 'product_inStock'>${inStock} </h4>
-<h4 class = 'product_rating'>${rating} </h4>
+<h5 class = 'product_inStock'>${inStock} </h5>
+<h6 class = 'product_rating'>${rating} </h6>
 <div class = 'product_image'>${image ? `<img src="${image}" alt="${title}" width="150">` : "<p>Нет фото</p>"} </div>
-<h4 class="product_tags">Tags: ${tags.join(", ")}</h4></li>`;
+<h6 class="product_tags">Tags: ${tags.join(", ")}</h6></li>`;
 
   list.insertAdjacentHTML("beforeend", item);
 };
