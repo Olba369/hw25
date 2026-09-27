@@ -86,24 +86,3 @@ notInStockBtn.addEventListener("click", handleAllbuttonClick);
 
 
 
-//////
-const input = document.querySelector("input");
-const btn = document.querySelector("button");
-const list = document.querySelector("ul");
-
-
- let = inputValue = "";
-
-
-
-
-const handleAddTodo = () => {
-    const todo = `<li>${inputValue}</li>`
-    list.insertAdjacentElement ("beforeend", todo);
-};
-btn.addEventListener ("click", handleAddTodo)
-
-const handleInputChange = (event) => {
-    inputValue = event.target.value; // забирає значення що ввів юзер і записує його в inputValue 
-};
-input.addEventListener ("change", handleInputChange);
