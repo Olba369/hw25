@@ -16,7 +16,7 @@ const logo = document.querySelector("h1");
 logo.insertAdjacentHTML//v chto dobavliaem// ("beforebegin", "<li>Item 3 </li>") "куди", "хтмл" 
 
 Створення та Додвання тега в розмітку
-const element3 = document.createElement ("li");<li></li> - створення елементв
+const element3 = document.createElement ("li");<li></li> - створення елемента
  element3.classList.add("item");<li class = "item"></li> - add class
  element3.textContent = "Item 3"; <li class = "item">Item 3</li>
 list.insertAdjacentElement("afterbegin", element3 );куди та який єлемент

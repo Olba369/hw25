@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+    <style>
+      .slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      #slide {
+        width: min(320px, calc(100vw - 100px));
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin: 12px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .dot {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #bbb;
+      }
+
+      .dot-item.active .dot {
+        background: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <button id="prev-btn" type="button" aria-label="Предыдущий слайд">←</button>
+
+      <img id="slide" src="" alt="Слайд" />
+
+      <button id="next-btn" type="button" aria-label="Следующий слайд">→</button>
+    </div>
+
+    <ul id="dots" class="dots" aria-label="Навигация по слайдам"></ul>
+
+    <script src="scr.js"></script>
+  </body>
+</html>
