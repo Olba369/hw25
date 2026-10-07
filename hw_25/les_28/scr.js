@@ -13,25 +13,24 @@ class Slider {
     this.dotsBox = document.querySelector("#dots");
     this.prevBtn = document.querySelector("#prev-btn");
     this.nextBtn = document.querySelector("#next-btn");
-    
-    // Вызываем методы через стрелочную функцию с скобками ()
+
     this.nextBtn.addEventListener("click", () => this.nextSlide());
     this.prevBtn.addEventListener("click", () => this.prevSlide());
-    
+
     this.createDots();
-    this.showSlide(); // Отображаем первое изображение при инициализации
+    this.showSlide();
   }
 
   showSlide() {
     this.imageBox.setAttribute("src", this.slides[this.currentIndex]);
-    this.updateDots(); // Было updateSlide()
+    this.updateDots();
   }
 
   nextSlide() {
     if (this.currentIndex < this.slides.length - 1) {
       this.currentIndex = this.currentIndex + 1;
     }
-    this.showSlide();   
+    this.showSlide();
   }
 
   prevSlide() {
@@ -45,20 +44,20 @@ class Slider {
     for (let i = 0; i < this.slides.length; i++) {
       const dot = document.createElement("li");
       dot.classList.add("dot-item");
-      
+
       dot.addEventListener("click", () => {
         this.currentIndex = i;
-        this.showSlide(); // Показываем выбранный слайд
+        this.showSlide();
       });
 
-      dot.innerHTML = `<span class="dot"></span>`; // Убран лишний пробел в < span>
+      dot.innerHTML = `<span class="dot"></span>`;
       this.dotsBox.insertAdjacentElement("beforeend", dot);
-    } // Убраны лишние `});`
+    }
   }
 
   updateDots() {
     const dots = this.dotsBox.querySelectorAll(".dot-item");
-    if (dots.length < 1) return; // Опечатка lemgth -> length
+    if (dots.length < 1) return;
 
     for (let i = 0; i < dots.length; i++) {
       dots[i].classList.remove("active");
@@ -67,5 +66,4 @@ class Slider {
   }
 }
 
-// Создаем экземпляр (класс объявлен с заглавной буквы Slider)
 const slider = new Slider(slides);
