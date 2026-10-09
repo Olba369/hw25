@@ -80,7 +80,7 @@ const calculateTotal = (price, quantity, discount = 0) => {
     discount < 0 ||
     discount > 100
   ) {
-    return "null";
+    return null;
   }
 
   // Формула: цена со скидкой, умноженная на количество
@@ -89,22 +89,22 @@ const calculateTotal = (price, quantity, discount = 0) => {
 
 // Invalid:
 test("negative quantity", () => {
-  expect(calculateTotal(5, -2.5, 10)).toBe("null");
+  expect(calculateTotal(5, -2.5, 10)).toBe(null);
 });
 test("negative price", () => {
-  expect(calculateTotal(-5, 2.5, 10)).toBe("null");
+  expect(calculateTotal(-5, 2.5, 10)).toBe(null);
 });
 
 test("zero price", () => {
-  expect(calculateTotal(0, 2.5, 100)).toBe("null");
+  expect(calculateTotal(0, 2.5, 100)).toBe(null);
 });
 
 test("string discount", () => {
-  expect(calculateTotal(5, 2.5, "bjnini")).toBe("null");
+  expect(calculateTotal(5, 2.5, "bjnini")).toBe(null);
 });
 
 test(" zero quantity", () => {
-  expect(calculateTotal(5, 0, 0)).toBe("null");
+  expect(calculateTotal(5, 0, 0)).toBe(null);
 });
 
 //valid:
